@@ -10,7 +10,7 @@ const CourseCard = ({ course }) => {
 
   return (
     <Link
-      to={`/course/${course.id}`}
+      to={`/course/${course._id}`}
       onClick={() => window.scrollTo(0, 0)}
       className='border border-gray-200 rounded-lg overflow-hidden bg-white hover:shadow-lg transition duration-200'
     >
@@ -24,7 +24,7 @@ const CourseCard = ({ course }) => {
       
       <div className='p-4 space-y-2'>
         <h3 className='text-lg font-semibold text-gray-800 text-center'>{course.courseTitle}</h3>
-        <p className='text-sm text-gray-500 text-center'>{course.educator.name}</p>
+        <p className='text-sm text-gray-500 text-center'>Vikas Gautam</p>
 
       
         <div className='flex flex-col items-center space-y-2 mt-2'>
@@ -40,10 +40,11 @@ const CourseCard = ({ course }) => {
           </div>
 
           
-          <p className='text-blue-600 text-base font-semibold'>
+          
+        </div>
+        <p className='text-blue-600 text-base font-semibold'>
             {currency}{finalPrice}
           </p>
-        </div>
       </div>
     </Link>
   );
